@@ -3,5 +3,6 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "WillLuke.nextjs.addTypesOnSave": true,
   "WillLuke.nextjs.hasPrompted": true,
-  "workbench.colorTheme": "Mayukai Reversal"
+  "workbench.colorTheme": "Mayukai Reversal",
+  "terminal.integrated.fontWeight": "normal"
 }

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import RestaurantCard from "./components/RestaurantCard";
 import { Cuisine, Location, PRICE, PrismaClient, Review } from "@prisma/client";
-
+import { prisma } from "../server/db/client";
 const inter = Inter({ subsets: ["latin"] });
 export interface RestaurantCardType {
   id: number;
@@ -14,8 +14,6 @@ export interface RestaurantCardType {
   slug: string;
   reviews: Review[];
 }
-
-const prisma = new PrismaClient();
 
 const fetchRestaurants = async () => {
   const restaurants = await prisma.restaurant.findMany({

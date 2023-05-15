@@ -1,6 +1,6 @@
-import { PRICE, PrismaClient } from "@prisma/client";
+import { PRICE } from "@prisma/client";
+import { prisma } from "@/server/db/client";
 
-const prisma = new PrismaClient();
 type Data = {
   name: string;
 };

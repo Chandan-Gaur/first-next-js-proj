@@ -3,9 +3,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import RestaurantNavBar from "../components/RestaurantNavBar";
 import Menu from "../components/Menu";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from "@/server/db/client";
 
 const fetchrestaurantMenu = async (slug: string) => {
   const restaurant = await prisma.restaurant.findUnique({
